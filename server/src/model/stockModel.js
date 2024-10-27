@@ -1,0 +1,94 @@
+const mongoose = require('mongoose');
+
+const stockSchema = new mongoose.Schema({
+code:{
+    type:String,
+    required:true,
+    unique:true
+},
+name:{
+    type:String,
+    required:true,
+},
+engname:{
+    type:String,
+},
+lasttrade:{
+    type:Number,
+    required:true,
+},
+prevclose:{
+    type:Number,
+    required:true,
+},
+open:{
+    type:Number,
+    required:true,
+},
+high:{
+    type:Number,
+    required:true,
+},
+low:{
+    type:Number,
+    required:true,
+},
+volume:{
+    type:Number,
+    required:true,
+},
+currentvolume:{
+    type:Number,
+    required:true,
+},
+amount:{
+    type:Number,
+    required:true,
+},
+ticktime:{
+    type:Date,
+    required:true,
+},
+buy:{
+    type:Number,
+    required:true,
+},
+sell:{
+    type:Number,
+    required:true,
+},
+high_52week:{
+    type:Number,
+    required:true,
+},
+low_52week:{
+    type:Number,
+    required:true,
+},
+eps:{
+    type:Number,
+    required:true,
+},
+stocks_sum:{
+    type:Number,
+    required:true,
+},
+pricechange:{
+    type:Number,
+    required:true,
+},
+changepercent:{
+    type:Number,
+    required:true,
+},
+market_value:{
+    type:Number,
+    required:true,
+},
+pe_ratio:{
+    type:Number,
+},
+});
+
+module.exports=mongoose.model('Stock',stockSchema);
+
